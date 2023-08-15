@@ -1,0 +1,33 @@
+import * as React from 'react';
+
+import { SvgIcon, SvgIconProps } from '@mui/material';
+
+export const StackOverflow: React.FC<SvgIconProps> = (props) => (
+	<SvgIcon
+		aria-labelledby="stackoverflow-icon"
+		role="img"
+		viewBox="0 0 384 512"
+		{...props}
+	>
+		<title id="stackoverflow-icon">StackOverflow icon</title>
+		<path
+			fill="currentColor"
+			d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"
+		/>
+	</SvgIcon>
+);
+
+export const MailBulk: React.FC<SvgIconProps> = (props) => (
+	<SvgIcon
+		aria-labelledby="mailbulk-icon"
+		role="img"
+		viewBox="0 0 640 512"
+		{...props}
+	>
+		<title id="mailbulk-icon">MailBulk icon</title>
+		<path
+			fill="currentColor"
+			d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"
+		/>
+	</SvgIcon>
+);

@@ -1,6 +1,11 @@
 import { type PaletteMode } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import { atom, selectorFamily, useRecoilValue } from 'recoil';
+import {
+	atom,
+	selectorFamily,
+	useRecoilCallback,
+	useRecoilValue,
+} from 'recoil';
 import { components } from './components';
 import palettes from './palettes';
 import * as typography from './typography';
@@ -66,4 +71,19 @@ export const Theme = selectorFamily({
 export function useTheme(name?: PaletteMode) {
 	const selected = useRecoilValue(ThemeName);
 	return useRecoilValue(Theme(name ?? selected));
+}
+
+/**
+ * Switches between "light" and "dark" themes.
+ */
+export function useToggleTheme(name?: PaletteMode) {
+	return useRecoilCallback(
+		(ctx) => () => {
+			ctx.set(
+				ThemeName,
+				name ?? ((prev) => (prev === 'dark' ? 'light' : 'dark'))
+			);
+		},
+		[]
+	);
 }

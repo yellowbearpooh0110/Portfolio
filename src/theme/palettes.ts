@@ -1,10 +1,18 @@
-import { type PaletteOptions } from '@mui/material/styles';
+import {
+	PaletteColor,
+	PaletteColorOptions,
+	type PaletteOptions,
+} from '@mui/material/styles';
 
 export const light: PaletteOptions = {
 	mode: 'light',
 
+	default: {
+		main: '#27272a',
+	},
+
 	primary: {
-		main: 'rgb(24,119,242)',
+		main: '#14b8a6',
 	},
 
 	background: {
@@ -19,6 +27,10 @@ export const light: PaletteOptions = {
 
 export const dark: PaletteOptions = {
 	mode: 'dark',
+
+	default: {
+		main: '#fff',
+	},
 
 	primary: {
 		main: 'rgb(45,136,255)',
@@ -42,6 +54,7 @@ export default { light, dark };
  */
 declare module '@mui/material/styles' {
 	interface Palette {
+		default: PaletteColor;
 		example: {
 			primary: string;
 			secondary: string;
@@ -49,6 +62,7 @@ declare module '@mui/material/styles' {
 	}
 
 	interface PaletteOptions {
+		default: PaletteColorOptions;
 		example: {
 			primary: string;
 			secondary: string;

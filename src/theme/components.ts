@@ -1,6 +1,6 @@
-import { type Palette, type ThemeOptions } from '@mui/material/styles';
+import { type ThemeOptions } from '@mui/material/styles';
 
-export const components = (palette: Palette): ThemeOptions['components'] => ({
+export const components = (): ThemeOptions['components'] => ({
 	MuiButton: {
 		styleOverrides: {
 			root: {
@@ -11,7 +11,6 @@ export const components = (palette: Palette): ThemeOptions['components'] => ({
 				'&:hover': {
 					boxShadow: 'none',
 				},
-				background: palette.primary.main,
 			},
 		},
 	},
