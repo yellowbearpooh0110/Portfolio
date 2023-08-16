@@ -52,7 +52,7 @@ export const Theme = selectorFamily({
 				{
 					palette,
 					typography: typography.options,
-					components: components(palette),
+					components: components(),
 				},
 				{
 					typography: typography.overrides,

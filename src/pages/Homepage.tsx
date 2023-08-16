@@ -19,6 +19,7 @@ import {
 	MailBulk as MailBulkIcon,
 	StackOverflow as StackOverflowIcon,
 } from '@components/common/icons';
+import Experience from '@components/homepage/Experience';
 import Projects from '@components/homepage/Projects';
 import SEO from '@data/seo';
 
@@ -100,6 +101,7 @@ const Homepage: React.FC = () => {
 					</IconButton>
 				</Stack>
 				<Projects />
+				<Experience />
 			</Container>
 		</React.Fragment>
 	);

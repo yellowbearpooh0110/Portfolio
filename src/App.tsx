@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import Footer from '@components/common/Footer';
 import Header from '@components/common/Header';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
 			<BrowserRouter>
 				<Header />
 				<Routes>
-					<Route path="/" element={<Homepage />} />
+					<Route path="/" element={<Navigate to="/home" />} />
 					<Route path="/home" element={<Homepage />} />
 				</Routes>
 				<Footer />
