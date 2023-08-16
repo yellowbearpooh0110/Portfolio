@@ -12,7 +12,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import INFO from '@data/user';
-import { Box, Grid, Link, Stack, Typography } from '@mui/material';
+import { Box, Divider, Grid, Link, Stack, Typography } from '@mui/material';
 
 import homepageImg from '@assets/images/homepage.jpg';
 import {
@@ -21,7 +21,7 @@ import {
 } from '@components/common/icons';
 import SEO from '@data/seo';
 
-const HomepageImg = styled.img(
+const AboutImg = styled.img(
 	css({
 		maxWidth: '100%',
 	})
@@ -77,11 +77,11 @@ const About: React.FC = () => {
 								transform: 'rotate(3deg)',
 							}}
 						>
-							<HomepageImg src={homepageImg} />
+							<AboutImg src={homepageImg} />
 						</Box>
 					</Grid>
 				</Grid>
-				<Grid container spacing={2} justifyContent="flex-end">
+				<Grid container spacing={2} mt={4} justifyContent="flex-end">
 					<Grid item xs={12} md={5}>
 						<Stack spacing={2} ml={2}>
 							{[
@@ -104,11 +104,6 @@ const About: React.FC = () => {
 									desc: 'Follow on Twitter',
 									icon: InstagramIcon,
 									link: 'https://github.com',
-								},
-								{
-									desc: 'pjohnson@cssllc.co',
-									icon: MailBulkIcon,
-									link: 'mailto:pjohnson@cssllc.co',
 								},
 							].map((item, index) => (
 								<Link
@@ -137,6 +132,31 @@ const About: React.FC = () => {
 									</Typography>
 								</Link>
 							))}
+							<Divider />
+							<Link
+								href={`mailto:${INFO.main.email}`}
+								target="_blank"
+								sx={{
+									textDecoration: 'none',
+									display: 'flex',
+									alignItems: 'center',
+									color: (theme) => theme.palette.default.main,
+									transition: 'color ease 0.3s',
+									'&:hover': {
+										color: (theme) => theme.palette.primary.main,
+									},
+								}}
+							>
+								<MailBulkIcon fontSize="small" />
+								<Typography
+									variant="h5"
+									component="span"
+									ml={1}
+									fontFamily="Roboto"
+								>
+									{INFO.main.email}
+								</Typography>
+							</Link>
 						</Stack>
 					</Grid>
 				</Grid>
