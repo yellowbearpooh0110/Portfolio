@@ -12,7 +12,7 @@ import {
 import { Avatar, Paper, Typography } from '@mui/material';
 import { deepPurple } from '@mui/material/colors';
 
-const experiences = [
+const histories = [
 	{
 		from: new Date('2018/01'),
 		to: 'Present',
@@ -147,7 +147,7 @@ const Experience: React.FC = () => {
 					},
 				}}
 			>
-				{experiences.map((item, index) => (
+				{histories.map((item, index) => (
 					<TimelineItem key={index}>
 						<TimelineSeparator>
 							<TimelineDot sx={{ bgcolor: 'transparent' }}>
@@ -158,7 +158,7 @@ const Experience: React.FC = () => {
 									{item.company.charAt(0)}
 								</Avatar>
 							</TimelineDot>
-							{index < experiences.length - 1 ? <TimelineConnector /> : null}
+							{index < histories.length - 1 ? <TimelineConnector /> : null}
 						</TimelineSeparator>
 						<TimelineContent sx={{ px: 2 }}>
 							<Typography

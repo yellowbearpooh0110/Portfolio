@@ -101,7 +101,7 @@ const Projects: React.FC = () => {
 			>
 				Test
 			</Button> */}
-			<Grid container spacing={2}>
+			<Grid container spacing={2} mt={4}>
 				{INFO.projects.map((item, index) => (
 					<Grid item xs={12} md={6} lg={4} key={index}>
 						<Project
